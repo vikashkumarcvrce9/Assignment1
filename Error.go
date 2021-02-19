@@ -13,14 +13,10 @@ func sqrt(value float64) (float64, error) {
 	return math.Sqrt(value), nil
 }
 func main() {
-	result, err := sqrt(-64)
-	if err != nil {
-		fmt.Println(err)
-
-	} else {
-		fmt.Println(result)
-	}
-	result, err = sqrt(64)
+	fmt.Println("Enter a Number")
+	var a float64
+	fmt.Scanln(&a)
+	result, err := sqrt(a)
 	if err != nil {
 		fmt.Println(err)
 
