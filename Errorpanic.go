@@ -13,16 +13,14 @@ func sqrt(value float64) (float64, error) {
 	return math.Sqrt(value), nil
 }
 func main() {
-	result, err := sqrt(-64)
-	if err != nil {
-		fmt.Println(err)
+	var t float64
+	fmt.Scanln(&t)
 
-	} else {
-		fmt.Println(result)
-	}
-	result, err = sqrt(64)
+	result, err := sqrt(t)
 	if err != nil {
-		fmt.Println(err)
+		panic(err)       //here panic is Created
+		fmt.Println(err) //If You Comment panic this Statemnt Next Line Also Printed
+		fmt.Print("Statement belongs After panic")
 
 	} else {
 		fmt.Println(result)
